@@ -14,7 +14,7 @@ spec:
         app: bms
     spec:
       containers:
-      - name: bms-container
+      - name: bimal-container
         image: bimalk074/bms:latest  # Replace with your Docker image
         ports:
         - containerPort: 3000  # Replace with the port your app runs on
