@@ -2,8 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bms-app
-  labels:
-    app: bms
+  namespace: bimal
 spec:
   replicas: 2
   selector:
@@ -15,7 +14,7 @@ spec:
         app: bms
     spec:
       containers:
-      - name: bms-container
-        image: kastrov/bms:latest  # Replace with your Docker image
+      - name: bimal-container
+        image: bimalk074/bms:latest  # Replace with your Docker image
         ports:
         - containerPort: 3000  # Replace with the port your app runs on
